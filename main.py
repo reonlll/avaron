@@ -3,7 +3,6 @@ from discord.ext import commands
 from discord import app_commands
 import os
 import requests
-from keep_alive import keep_alive
 
 # Intent設定
 intents = discord.Intents.default()
@@ -120,5 +119,4 @@ async def subtract_gold(interaction: discord.Interaction, user: discord.User, am
     )
 
 # --- Flaskで常時起動 ---
-keep_alive()
 bot.run(os.environ['TOKEN'])
